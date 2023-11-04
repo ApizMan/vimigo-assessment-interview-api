@@ -38,26 +38,4 @@ class AttendantRecordController extends Controller
             ],
         );
     }
-
-    public function update(Request $request, $id)
-    {
-        $attendant = AttendantRecord::find($id);
-        $attendant->update($request->all());
-        return response()->json(
-            [
-                'message' => 'Updated Successfully', 'data' => $attendant,
-            ],
-        );
-    }
-
-    public function destroy($id)
-    {
-        $attendant = AttendantRecord::find($id);
-        $attendant->delete();
-        return response()->json(
-            [
-                'message' => 'Deleted Successfully', 'data' => null,
-            ],
-        );
-    }
 }

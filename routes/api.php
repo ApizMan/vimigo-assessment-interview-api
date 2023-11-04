@@ -19,9 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Coursework
+// Attendant Record
 Route::get('/attendant-record', [AttendantRecordController::class, 'index'],);
 Route::post('/attendant-record', [AttendantRecordController::class, 'store'],);
 Route::get('/attendant-record/{id}', [AttendantRecordController::class, 'show'],);
-Route::put('/attendant-record/{id}', [AttendantRecordController::class, 'update'],);
-Route::delete('/attendant-record/{id}', [AttendantRecordController::class, 'destroy'],);
